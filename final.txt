@@ -1,0 +1,193 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+    <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        nav a:hover + .submenu {
+            display: block;
+        }
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+            border-radius: 5px;
+        }
+        .submenu li {
+            margin: 5px 0;
+        }
+        .submenu a {
+            color: white;
+            text-decoration: none;
+        }
+        .submenu a:hover {
+            text-decoration: underline;
+        }
+        .flexslider {
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+        }
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px;
+        }
+        .product {
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+        }
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("nav a").on("click", function(e) {
+                e.preventDefault();
+                const target = $(this).attr("href");
+                if (target === "#home") {
+                    $(".content").hide();
+                    $(".flexslider").show();
+                } else {
+                    $(".flexslider").hide();
+                    $(".content").hide();
+                    $(target).fadeIn();
+                }
+            });
+            $('.flexslider').flexslider({
+                animation: "slide",
+                rtl: true
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Apple</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#iphone">iPhone</a>
+        <a href="#macbook">MacBook</a>
+        <a href="#ipad">iPad</a>
+        <a href="#accessories">Accessories</a>
+    </nav>
+    <div class="flexslider">
+        <ul class="slides">
+             <li><img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-model-unselect-gallery-1-202409?wid=5120&hei=2880&fmt=webp&qlt=70&.v=ZnlzVUZzRWd3dlg0RllqbHhQSUpKTGdzSmpObkZCM3MrNmJ5SkhESlNDaWhXRnNvWU5kTFRnSWM5eDdhTWw0bEpFd0xhWDVibStLdGRYRmxkNGI4VTdpMGJRT0ppMjh4RlRZQkc0Q3FZZEQ5aFhSWndydDBTaGRRd3dvbVFwcGk&traceId=1" alt="幻燈片 1"></li>
+            <li><img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-mini-finish-unselect-gallery-2-202410?wid=5120&hei=2880&fmt=webp&qlt=70&.v=eDJDc00wczl1QWk5QmpVYitFNXQwOVgrSXpWVEhWaW9YTGlWRHFoSHU0K1NzUllIVWQxdUVhWUc3Rk1UbkoxNWd2S3NaRzcrU0dmYjNHTUFiMnlsWFRocXAvNjVVaCtjTTZGTUNzOU8wNkhibXY5OUR4d2k5dUdrQkgzYm42Z3Q&traceId=1" alt="幻燈片 2"></li>
+            <li><img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mac-system-202306?wid=1300&hei=730&fmt=png-alpha&.v=1683931337526" alt="幻燈片 3"></li>
+        </ul>
+    </div>
+    <div id="iphone" class="content">
+        <h2>iPhone</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-model-unselect-gallery-1-202309?wid=5120&hei=2880&fmt=webp&qlt=70&.v=aVFiZEF4WDEvUWJNSU5HRDg4cklnTGdzSmpObkZCM3MrNmJ5SkhESlNDZ1UwRE05YU1MZ0lYWk55ZU5FOENXWkpFd0xhWDVibStLdGRYRmxkNGI4VTdpMGJRT0ppMjh4RlRZQkc0Q3FZZEI4UW55RWdXT3BFc2NrR2VEb1pCOGo&traceId=1" alt="iPhone">
+                <h3>iPhone 15</h3>
+                <p>最新款 iPhone，極致性能。</p>
+            </div>
+            <div class="product">
+                <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-se-finish-unselect-gallery-1-202207?wid=5120&hei=2880&fmt=webp&qlt=70&.v=VEhreGxMWU8vckorVEJ3dVU2RjJZZFgrSXpWVEhWaW9YTGlWRHFoSHU0L3R6NnhRaHBRWDl3NFJZMDZlMGtTTWd2S3NaRzcrU0dmYjNHTUFiMnlsWFRocXAvNjVVaCtjTTZGTUNzOU8wNkdHQitiblNSUmw5N2I0WHR6NmEySjM&traceId=1"iPhone">
+                <h3>iPhone SE</h3>
+                <p>小巧便攜，價格實惠。</p>
+            </div>
+        </div>
+    </div>
+    <div id="macbook" class="content">
+        <h2>MacBook</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp14-spaceblack-select-202410?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1728916305295"MacBook">
+                <h3>MacBook Pro</h3>
+                <p>專業創作的首選工具。</p>
+            </div>
+            <div class="product">
+                <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mba13-midnight-select-202402?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1708367688034"MacBook">
+                <h3>MacBook Air</h3>
+                <p>輕薄設計，強大性能。</p>
+            </div>
+        </div>
+    </div>
+    <div id="ipad" class="content">
+        <h2>iPad</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-pro-model-select-gallery-1-202405?wid=5120&hei=2880&fmt=webp&qlt=70&.v=cXN0QTVTNDBtbGIzcy91THBPRThnNE5sSFgwakNWNmlhZ2d5NGpHdllWY09WV3R2ZHdZMXRzTjZIcWdMTlg4eUJQYkhSV3V1dC9oa0s5K3lqMGtUaFMvR01EVDlzK0hIS1J2bTdpY0pVeTF1Yy9kL1dQa3EzdWh4Nzk1ZnZTYWY&traceId=1" alt="iPad">
+                <h3>iPad Pro</h3>
+                <p>適合創意工作的多功能平板。</p>
+            </div>
+            <div class="product">
+                <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-mini-finish-unselect-gallery-1-202410?wid=5120&hei=2880&fmt=webp&qlt=70&.v=eDJDc00wczl1QWk5QmpVYitFNXQwOVgrSXpWVEhWaW9YTGlWRHFoSHU0L1BqbTR3VEdKRWdqMUVib1BPSWdhYWd2S3NaRzcrU0dmYjNHTUFiMnlsWFRocXAvNjVVaCtjTTZGTUNzOU8wNkVyNS9FSzFhNVRJSXdZQnFCMkJ5K2E&traceId=1" alt="iPad">
+                <h3>iPad Mini</h3>
+                <p>輕巧方便，隨時隨地。</p>
+            </div>
+        </div>
+    </div>
+    <div id="accessories" class="content">
+        <h2>Accessories</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/airpods-pro-2-hero-select-202409_FV1?wid=976&hei=916&fmt=jpeg&qlt=90&.v=1725492499003" alt="AirPods">
+                <h3>AirPods Pro</h3>
+                <p>高音質，降噪體驗。</p>
+            </div>
+            <div class="product">
+                <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ultra-case-unselect-gallery-1-202409_GEO_TW?wid=5120&hei=3280&fmt=p-jpg&qlt=80&.v=1724871389041" alt="Apple Watch">
+                <h3>Apple Watch</h3>
+                <p>健康追蹤，智慧穿戴。 </p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© Copyright © 2024 Apple Inc. 保留一切權利。</p>
+    </footer>
+</body>
+</html>
