@@ -1,6 +1,4 @@
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apple</title>
     <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
@@ -187,7 +185,7 @@
         </div>
     </div>
     <footer>
-        <p>© Copyright © 2024 Apple Inc. 保留一切權利。</p>
+        <p>© 2024 B12090079 李宇倫 保留一切權利。</p>
     </footer>
 </body>
 </html>
